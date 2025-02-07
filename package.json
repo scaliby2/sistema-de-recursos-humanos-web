@@ -1,5 +1,5 @@
 {
-  "name": "recursoshumanosreact",
+  "name": "recursoshumanosreact",  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
+    "boostrap": "^2.0.0",
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -22,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.3.0"
   }
 }

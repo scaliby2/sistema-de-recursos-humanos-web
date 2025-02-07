@@ -1,0 +1,32 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px) scale(0.8);  /* Empezamos desde una posición más arriba y un poco más pequeño */
+      filter: blur(5px);  /* Empezamos con un pequeño desenfoque */
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(0) scale(1.05);  /* Movimiento hacia abajo y escala ligeramente */
+      filter: blur(2px);  /* Desenfoque moderado */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);  /* Llegamos a la posición final sin escala */
+      filter: blur(0);  /* Sin desenfoque */
+    }
+  }
+  
+  h1 {
+    font-family: 'Arial, sans-serif';
+    font-weight: bold;
+    color: transparent;
+    font-size: 60px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);  /* Gradiente de color */
+    -webkit-background-clip: text;  /* Solo aplica el gradiente al texto */
+    background-clip: text;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra de texto para resaltar */
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-out;  /* Aplica la animación fadeIn */
+    animation-delay: 0.5s;  /* Retrasa la animación para crear un efecto más fluido */
+  }
+  

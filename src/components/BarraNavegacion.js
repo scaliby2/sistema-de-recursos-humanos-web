@@ -1,13 +1,17 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 export default function BarraNavegacion() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold" href="/" style={{ color: "#007BFF" }}>
+          <a
+            className="navbar-brand fw-bold"
+            href="/"
+            style={{ color: "#007BFF" }}
+          >
             Sistema de Recursos Humanos
           </a>
           <button
@@ -28,7 +32,7 @@ export default function BarraNavegacion() {
                   className="nav-link active text-primary"
                   aria-current="page"
                   href="/"
-                  style={{ fontWeight: '500' }}
+                  style={{ fontWeight: "500" }}
                 >
                   Inicio
                 </a>
@@ -37,9 +41,18 @@ export default function BarraNavegacion() {
                 <Link
                   className="nav-link text-dark"
                   to="/agregar"
-                  style={{ fontWeight: '500' }}
+                  style={{ fontWeight: "500" }}
                 >
                   Agregar Empleado
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-dark"
+                  to="/login"
+                  style={{ fontWeight: "500" }}
+                >
+                  Salir
                 </Link>
               </li>
             </ul>
