@@ -5,7 +5,7 @@ import { FaArrowLeft, FaSave } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function EditarEmpleado() {
-  const urlBase = "http://localhost:8080/rh-app/empleados";
+  const urlBase = "http://localhost:8080/rh-app";
   const { id } = useParams();
   let navegacion = useNavigate();
 
@@ -20,7 +20,7 @@ export default function EditarEmpleado() {
   useEffect(() => {
     const cargarEmpleado = async () => {
       try {
-        const resultado = await axios.get(`${urlBase}/${id}`);
+        const resultado = await axios.get(`${urlBase}/empleados/${id}`);
         setEmpleado(resultado.data);
       } catch (error) {
         console.log("Error al cargar el empleado", error);
@@ -36,7 +36,7 @@ export default function EditarEmpleado() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`${urlBase}/${id}`, empleado);
+      await axios.put(`${urlBase}/editar/${id}`, empleado); // Ruta corregida
       navegacion("/");
     } catch (error) {
       console.log("Error al editar", error);

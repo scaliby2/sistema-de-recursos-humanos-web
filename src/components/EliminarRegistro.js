@@ -33,7 +33,7 @@ export default function EditarEmpleado() {
 
   const eliminarEmpleado = async () => {
     try {
-      await axios.delete(`${urlBase}/${id}`);
+      await axios.delete(`http://localhost:8080/rh-app/eliminar/${id}`);
       navegacion("/");
     } catch (error) {
       console.log("Error al eliminar", error);
